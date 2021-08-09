@@ -57,9 +57,11 @@ formattedData['Password'] = str([b.split(":")[1][1:-1]
 
 # Prints out WiFi details
 # TODO: output useful info from df
-print("<~~~~ WiFi Details ~~~>")
+print("\n<~~~~ WiFi Details ~~~>")
 print("    SSID:   ", formattedData.SSID.item().strip())
-print("    Password:    ", formattedData.Password.item().strip())
+print("    Radio Type:    ", formattedData['Radio type'].item().strip())
+print("    Channnel:   ", formattedData.Channel.item().strip())
+print("    Signal Strength:   ", formattedData.Signal.item().strip())
 
 # generate Qr code
 qrImg = wifi_qrcode_generator.wifi_qrcode(formattedData.Profile.item().strip(), 
