@@ -42,6 +42,7 @@ for num in range(len(connectionData)):
 connectionData = [val for val in connectionData if len(val) > 1]
 
 # creating dataframe with clean data
+# TODO: convert or migrate from df to series
 formattedData = pd.DataFrame(connectionData).transpose()
 newHeader = formattedData.iloc[0]
 formattedData = formattedData[1:]
@@ -55,6 +56,7 @@ formattedData['Password'] = str([b.split(":")[1][1:-1]
                     for b in password if "Key Content" in b])[2:-2]
 
 # Prints out WiFi details
+# TODO: output useful info from df
 print("<~~~~ WiFi Details ~~~>")
 print("    SSID:   ", formattedData.SSID.item().strip())
 print("    Password:    ", formattedData.Password.item().strip())
