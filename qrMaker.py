@@ -57,6 +57,7 @@ formattedData['Password'] = str([b.split(":")[1][1:-1]
 
 # Prints out WiFi details
 # TODO: output useful info from df
+# TODO: format tab spacing between items in console
 print("\n<~~~~ WiFi Details ~~~>")
 print("    SSID:   ", formattedData.SSID.item().strip())
 print("    Radio Type:    ", formattedData['Radio type'].item().strip())
