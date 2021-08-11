@@ -4,11 +4,10 @@
 @date: 08/2021
 @description: Used to pull connection details from currently connected WiFi
                 and creates QR code. Only works for Windows devices only
-                
-Modules used:
-    subprocess - used to run Windows commands
-    Pandas - Used to clean data collected from subprocess
-    wifi_qrcode_generator - used to create QR code with dataframe data
+
+@Modules:    subprocess - used to run Windows commands
+             Pandas - Used to clean data collected from subprocess
+             wifi_qrcode_generator - used to create QR code with dataframe data
 """
 import subprocess
 import pandas as pd
