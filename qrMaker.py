@@ -69,5 +69,6 @@ try:
                                             formattedData.Password.item().strip())
     # outputs image to default picture viewer
     qrImg.show()
+    qrImg.save("wifi_qr.png")
 except AttributeError:
     print("\nNo WiFi connection found.  Check your settings and try again!\n")
